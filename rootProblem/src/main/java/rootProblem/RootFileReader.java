@@ -78,13 +78,13 @@ public class RootFileReader {
 	        		
 	        		} else {
 	        			
-	        			System.out.println("***NO DRIVER FOR TRIP DATA AT LINE " + linesInFile);
+	        			System.out.println("***NO DRIVER FOR TRIP DATA AT LINE " + linesInFile + "***");
 	        			
 	        		}
 	        		
 	        	} else {
 	        		
-	        		System.out.println("***INCORRECT DATA AT LINE " + linesInFile);
+	        		System.out.println("***INCORRECT DATA AT LINE " + linesInFile + "***");
 	        		
 	        	}
 	            
@@ -92,7 +92,7 @@ public class RootFileReader {
 	        
 	    } catch (FileNotFoundException fnf) {
 	    	
-	        System.out.println(filePath + " does not exist");
+	        System.out.println("***ERROR:" + filePath + " does not exist***");
 	        
 	    } catch (IOException ioe) {
 	    	

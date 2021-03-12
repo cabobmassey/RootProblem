@@ -1,7 +1,7 @@
 Driver Dan
-Driver Tina
-Trip Dan 06:12 07:45 20.56
-Trip Dan 10:15 12:45 45.2
-Trip Tina 07:15 07:45 17.3
+Driver Lauren
+Driver Kumi
 Trip Dan 07:15 07:45 17.3
-Trip Tina 02:15 07:45 20.78
+Trip Dan 06:12 06:32 21.8
+Trip Lauren 12:01 13:16 42.0
+Trip Kumi 12:00 13:00 3

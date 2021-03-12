@@ -2,7 +2,7 @@ package rootProblem.Models;
 
 import java.util.ArrayList;
 
-public class RootDriver {
+public class RootDriver implements Comparable<RootDriver>{
 	
 	String name;
 	float milesDriven;
@@ -17,6 +17,12 @@ public class RootDriver {
 	public RootDriver(String name) {
 		super();
 		this.name = name;
+	}
+
+	@Override
+	public int compareTo(RootDriver rootDriver) {
+		// compare by miles driven
+		return (int)(this.milesDriven - rootDriver.milesDriven);
 	}
 	
 	public String getName() {
