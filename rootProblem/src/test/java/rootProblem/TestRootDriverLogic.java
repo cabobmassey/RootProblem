@@ -97,5 +97,63 @@ class TestRootDriverLogic {
 		assertEquals(false, kumi.getTrips().isEmpty());
 		
 	}
+	
+	@Test
+	//should add all trips and names except for trips under 5mph or over 100mph
+	public void testZeroValues() {
+		
+		HashMap<String, RootDriver> drivers = new HashMap<String, RootDriver>();
+		
+		RootDriver dan = new RootDriver();
+		
+		RootTrip trip1 = new RootTrip();
+		
+		RootDriverLogic driverLogic = new RootDriverLogic();
+		
+		//add drivers to map
+		drivers.put("Dan", dan);
+		
+		//expect 89mph
+		trip1.setDistance(0);
+		trip1.setTotalTime(0);
+		
+		dan.addTrips(trip1);
+
+		driverLogic.calculateTrips(dan);
+		
+		assertEquals(0, dan.getMilesDriven());
+		assertEquals(0, dan.getAvgSpeed());
+		assertEquals(false, dan.getTrips().isEmpty());
+		
+	}
+		
+		@Test
+		//should add all trips and names except for trips under 5mph or over 100mph
+		public void testNegativeValues() {
+			
+			HashMap<String, RootDriver> drivers = new HashMap<String, RootDriver>();
+			
+			RootDriver dan = new RootDriver();
+			
+			RootTrip trip1 = new RootTrip();
+			
+			RootDriverLogic driverLogic = new RootDriverLogic();
+			
+			//add drivers to map
+			drivers.put("Dan", dan);
+			
+			//expect 89mph
+			trip1.setDistance(-10);
+			trip1.setTotalTime(-3);
+			
+			dan.addTrips(trip1);
+
+			driverLogic.calculateTrips(dan);
+			
+			assertEquals(0, dan.getMilesDriven());
+			assertEquals(0, dan.getAvgSpeed());
+			assertEquals(false, dan.getTrips().isEmpty());
+
+	}
 
 }
